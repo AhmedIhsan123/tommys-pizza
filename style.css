@@ -1,0 +1,55 @@
+body {
+    background-color: darkred;
+    margin: 0;
+    font-family: serif;
+}
+
+main {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    padding: 0 1rem 2rem 1rem;
+}
+
+header {
+    padding: 2rem 1rem;
+    background-color: gray;
+}
+
+header img {
+    float: right;
+}
+
+header h1 {
+    color: darkgreen;
+    font-weight: 600;
+    font-size: 3.5rem;
+}
+
+#contact-btn {
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: darkgreen;
+}
+
+#tagline {
+    font-weight: bolder;
+    font-size: 1.05rem;
+}
+
+fieldset {
+    border: 1px solid darkgreen;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+legend {
+    color: darkgreen;
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+}
