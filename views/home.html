@@ -6,19 +6,19 @@
     <title>Papa's Pizza</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="images/pizza-icon.png">
+    <link rel="icon" href="../images/pizza-icon.png">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <main>
         <header>
-            <img src="images/pizza-guy-img.jpg" alt="Poppa">
+            <img src="../images/pizza-guy-img.jpg" alt="Poppa">
             <h1>Tommy's Pizza</h1>
             <p id="tagline">The best pizza GRC students have ever tasted!</p>
             <hr>
-            <p>Poppa’s Pizza serves up fresh, handcrafted pizzas with 
+            <p>Tommy's Pizza serves up fresh, handcrafted pizzas with 
                 bold flavors and a warm, family-friendly vibe.</p>
             <a class="main-button" id="contact-button" href="#" role="button">Contact Us</a>
         </header>
@@ -60,8 +60,19 @@
                 <label for="meat">
                     <input type="checkbox" id="meat" name="toppings[]" value="meat">Meat
                 </label>
-
             </fieldset> 
+
+            <!-- Pizza size -->
+            <fieldset>
+                <legend>Pizza: Size</legend>
+                <select id="size" name="size">
+                    <option value="none">-- Select a Size --</option>
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select>
+
+            </fieldset>
 
             <!-- Add a order button -->
             <button type="submit">Place Order</button>
