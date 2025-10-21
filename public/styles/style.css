@@ -101,6 +101,12 @@ label {
 	padding-bottom: 0.5rem;
 }
 
+.error {
+	color: red;
+	font-size: 0.875rem;
+	display: none;
+}
+
 /* Mobile styles */
 @media (max-width: 480px) {
 	#main {
