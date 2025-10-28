@@ -22,7 +22,10 @@
                 bold flavors and a warm, family-friendly vibe.</p>
             <a class="main-button" id="contact-button" href="/contact-us" role="button">Contact Us</a>
         </header>
-        <h1>Thank you for your order!</h1>
+        <h1>Thank you for your order, <%= order.fname %>!</h1>
+        <h2>Order Summary</h2>
+        <p>Name: <%= order.fname %> <%= order.lname%></p>
+        <p>Date: <%= order.timestamp.toLocaleString() %></p>
     <main>
 </body>
 </html>

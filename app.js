@@ -44,19 +44,21 @@ app.get("/confirm", (req, res) => {
 
 // Define a "admin" root
 app.get("/admin", (req, res) => {
-	res.send(orders);
+	res.render("admin", { orders });
 });
 
 // Define a "submit" root
 app.post("/submit-order", (req, res) => {
 	// Create a JSON object to store the data
-	const order = {
-		fname: req.body.fname,
-		lname: req.body.lname,
-	};
+	const order = req.body;
+
+	// Add a date timestamp
+	order.timestamp = new Date();
+
+	console.log(order);
 
 	// Push the order to the orders array
 	orders.push(order);
 
-	res.render("confirmation");
+	res.render("confirmation", { order });
 });
