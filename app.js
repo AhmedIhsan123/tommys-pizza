@@ -4,6 +4,9 @@ import express from "express";
 // Create instance of ane Express application
 const app = express();
 
+// Set the view engine to EJS
+app.set("view engine", "ejs");
+
 // Define the port number where our server will listen
 const PORT = 3000;
 
@@ -26,17 +29,17 @@ app.listen(PORT, () => {
 
 // Define a default route
 app.get("/", (req, res) => {
-	res.sendFile(`${import.meta.dirname}/views/home.html`);
+	res.render("home");
 });
 
 // Define a "contact-us" root
 app.get("/contact-us", (req, res) => {
-	res.sendFile(`${import.meta.dirname}/views/contact.html`);
+	res.render("contact");
 });
 
 // Define a "confirmation" root
 app.get("/confirm", (req, res) => {
-	res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+	res.render("confirmation");
 });
 
 // Define a "admin" root
@@ -55,5 +58,5 @@ app.post("/submit-order", (req, res) => {
 	// Push the order to the orders array
 	orders.push(order);
 
-	console.log(orders);
+	res.render("confirmation");
 });
